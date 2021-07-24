@@ -15,8 +15,8 @@ namespace LiteServer.Http.Tests
         {
             var featureCollection = new FeatureCollection
             {
-                {typeof(IHttpRequestFeature), new HttpFeatureRequestTest()},
-                {typeof(IHttpResponseFeature), new HttpFeatureResponseTest()}
+                {typeof(IHttpRequestFeature), new HttpRequestTest()},
+                {typeof(IHttpResponseFeature), new HttpResponseTest()}
             };
 
             var request = featureCollection.Get<IHttpRequestFeature>();
@@ -30,8 +30,8 @@ namespace LiteServer.Http.Tests
         {
             var featureCollection = new FeatureCollection();
             featureCollection
-                .Set<IHttpRequestFeature>(new HttpFeatureRequestTest())
-                .Set<IHttpResponseFeature>(new HttpFeatureResponseTest());
+                .Set<IHttpRequestFeature>(new HttpRequestTest())
+                .Set<IHttpResponseFeature>(new HttpResponseTest());
 
             var httpResponseFeature = featureCollection.Get<IHttpResponseFeature>();
             var httpRequestFeature = featureCollection.Get<IHttpRequestFeature>();
@@ -47,9 +47,9 @@ namespace LiteServer.Http.Tests
 
             var body = Stream.Null;
             var headers = new NameValueCollection();
-            featureCollection.Set<IHttpResponseFeature>(new HttpFeatureResponseTest(headers, body, 200))
-                             .Set<IHttpResponseFeature>(new HttpFeatureResponseTest(headers, body, 400))
-                             .Set<IHttpResponseFeature>(new HttpFeatureResponseTest(headers, body, 404));
+            featureCollection.Set<IHttpResponseFeature>(new HttpResponseTest(headers, body, 200))
+                             .Set<IHttpResponseFeature>(new HttpResponseTest(headers, body, 400))
+                             .Set<IHttpResponseFeature>(new HttpResponseTest(headers, body, 404));
 
             var httpResponseFeature = featureCollection.Get<IHttpResponseFeature>();
             httpResponseFeature.StatusCode.Should().Be(404);

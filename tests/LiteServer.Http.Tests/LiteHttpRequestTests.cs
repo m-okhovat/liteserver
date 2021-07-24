@@ -20,7 +20,7 @@ namespace LiteServer.Http.Tests
             headers.Add("testKey", "testValue");
             var uri = new Uri("http://testurl.com");
             var body = Stream.Null;
-            featureCollection.Set<IHttpRequestFeature>(new HttpFeatureRequestTest(uri, body, headers));
+            featureCollection.Set<IHttpRequestFeature>(new HttpRequestTest(uri, body, headers));
 
             var liteHttpRequest = new LiteHttpRequest(featureCollection);
 

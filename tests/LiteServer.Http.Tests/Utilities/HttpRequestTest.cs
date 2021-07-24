@@ -6,9 +6,9 @@ using System.IO;
 namespace LiteServer.Http.Tests.Utilities
 {
 
-    public class HttpFeatureRequestTest : IHttpRequestFeature
+    public class HttpRequestTest : IHttpRequestFeature
     {
-        public HttpFeatureRequestTest(Uri uri = default, Stream body = default, NameValueCollection headers = default)
+        public HttpRequestTest(Uri uri = default, Stream body = default, NameValueCollection headers = default)
         {
             Uri = uri;
             Body = body;

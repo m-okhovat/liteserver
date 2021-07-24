@@ -18,5 +18,4 @@ namespace LiteServer.Http.HttpContext
         public Stream Body => _requestFeature.Body;
         public NameValueCollection Headers => _requestFeature.Headers;
     }
-
 }

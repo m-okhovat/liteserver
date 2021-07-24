@@ -4,9 +4,9 @@ using System.IO;
 
 namespace LiteServer.Http.Tests.Utilities
 {
-    public class HttpFeatureResponseTest : IHttpResponseFeature
+    public class HttpResponseTest : IHttpResponseFeature
     {
-        public HttpFeatureResponseTest(NameValueCollection headers = default, Stream response = default, int statusCode = default)
+        public HttpResponseTest(NameValueCollection headers = default, Stream response = default, int statusCode = default)
         {
             Headers = headers;
             Response = response;
