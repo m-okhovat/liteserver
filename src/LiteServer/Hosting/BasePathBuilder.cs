@@ -35,6 +35,5 @@
         {
             return new BasePath(_hostName, _port, _url, _useHttps);
         }
-
     }
 }
