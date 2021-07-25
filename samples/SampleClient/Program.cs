@@ -1,5 +1,7 @@
 ﻿using LiteServer.Extensions;
 using LiteServer.Extensions.Hosting;
+using LiteServer.Http.Extensions;
+using LiteServer.Listener.Handlers;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Threading.Tasks;
@@ -14,11 +16,16 @@ namespace SampleClient
             {
                 var host = Host.CreateDefaultBuilder(args)
                     .ConfigureLiteServerDefaults(builder =>
+                    {
+                        builder.Use(FirstMiddleware)
+                                .Use(SecondMiddleware);
+
                         builder.UseEndpoints(routeBuilder =>
                         {
-
-                        }), "http://localhost:5001/")
-                    .Build();
+                            routeBuilder.Map("/Health", context => context.Response.WriteAsync("I am healthy"));
+                        });
+                    }, "http://localhost:5001/")
+                        .Build();
 
                 host.Run();
 
@@ -39,6 +46,24 @@ namespace SampleClient
                 throw;
             }
 
+        }
+
+        static HandlerDelegate FirstMiddleware(HandlerDelegate next)
+        {
+            return async context =>
+            {
+                await context.Response.WriteAsync("first middleware says hello! =>");
+                await next(context);
+            };
+        }
+
+        static HandlerDelegate SecondMiddleware(HandlerDelegate next)
+        {
+            return async context =>
+            {
+                await context.Response.WriteAsync("second middleware says hello =>");
+                await next(context);
+            };
         }
     }
 }
