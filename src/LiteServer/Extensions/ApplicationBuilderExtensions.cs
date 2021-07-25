@@ -1,4 +1,5 @@
 ﻿using LiteServer.AppBuilders;
+using LiteServer.Routing;
 using System;
 
 namespace LiteServer.Extensions
@@ -12,7 +13,7 @@ namespace LiteServer.Extensions
             configure(endpointRouteBuilder);
             appBuilder.Use(handler => context =>
             {
-                var requestUrl = context.Request.Url;
+                var requestUrl = context.Request.Uri;
                 var uri = requestUrl.AbsolutePath;
                 var endpoint = endpointRouteBuilder.GetEndpoint(uri);
                 return endpoint.HandlerDelegate(context);
