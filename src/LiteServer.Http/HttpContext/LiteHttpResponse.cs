@@ -1,7 +1,7 @@
-﻿using System.Collections.Specialized;
-using System.IO;
-using LiteServer.Http.Extensions;
+﻿using LiteServer.Http.Extensions;
 using LiteServer.Http.Features;
+using System.Collections.Specialized;
+using System.IO;
 
 namespace LiteServer.Http.HttpContext
 {
@@ -14,7 +14,7 @@ namespace LiteServer.Http.HttpContext
         }
 
         public int StatusCode => _responseFeature.StatusCode;
-        public Stream Response => _responseFeature.Response;
+        public Stream Body => _responseFeature.Body;
         public NameValueCollection Headers => _responseFeature.Headers;
     }
 }

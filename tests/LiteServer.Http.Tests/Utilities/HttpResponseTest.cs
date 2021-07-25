@@ -6,14 +6,14 @@ namespace LiteServer.Http.Tests.Utilities
 {
     public class HttpResponseTest : IHttpResponseFeature
     {
-        public HttpResponseTest(NameValueCollection headers = default, Stream response = default, int statusCode = default)
+        public HttpResponseTest(NameValueCollection headers = default, Stream body = default, int statusCode = default)
         {
             Headers = headers;
-            Response = response;
+            Body = body;
             StatusCode = statusCode;
         }
         public NameValueCollection Headers { get; private set; }
-        public Stream Response { get; private set; }
+        public Stream Body { get; private set; }
         public int StatusCode { get; set; }
     }
 }

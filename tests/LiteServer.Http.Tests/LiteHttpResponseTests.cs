@@ -23,7 +23,7 @@ namespace LiteServer.Http.Tests
             var liteHttpResponse = new LiteHttpResponse(featureCollection);
 
             liteHttpResponse.StatusCode.Should().Be(statusCode);
-            liteHttpResponse.Response.Should().Be(body);
+            liteHttpResponse.Body.Should().Be(body);
             liteHttpResponse.Headers.Should().BeEquivalentTo(headers);
         }
     }
