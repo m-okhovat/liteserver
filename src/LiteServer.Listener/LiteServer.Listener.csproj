@@ -1,12 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Handlers\" />
+    <Folder Include="Hosting\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LiteServer.Http\LiteServer.Http.csproj" />
-    <ProjectReference Include="..\LiteServer.Listener\LiteServer.Listener.csproj" />
   </ItemGroup>
 
 </Project>

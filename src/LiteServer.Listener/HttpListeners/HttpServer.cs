@@ -1,17 +1,17 @@
-﻿using LiteServer.Extensions;
-using LiteServer.Handlers;
-using LiteServer.Http.Extensions;
-using LiteServer.Http.Features;
-using LiteServer.Http.HttpContext;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using LiteServer.Http.Extensions;
+using LiteServer.Http.Features;
+using LiteServer.Http.HttpContext;
+using LiteServer.Listener.Extensions;
+using LiteServer.Listener.Handlers;
 
-namespace LiteServer.HttpListeners
+namespace LiteServer.Listener.HttpListeners
 {
     public class HttpServer : HttpServerBase
     {

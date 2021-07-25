@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteServer", "src\LiteServer\LiteServer.csproj", "{E8A16204-7623-4A96-A215-211BE0EB374D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteServer.Listener", "src\LiteServer.Listener\LiteServer.Listener.csproj", "{E8A16204-7623-4A96-A215-211BE0EB374D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteServer.Http", "src\LiteServer.Http\LiteServer.Http.csproj", "{E85A53C8-502B-46C7-9410-BA403C76ABE4}"
 EndProject
@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F018048A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteServer.Http.Tests", "tests\LiteServer.Http.Tests\LiteServer.Http.Tests.csproj", "{C42DE563-34BB-4407-AE38-AF8F8F46E9E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteServer.Tests", "tests\LiteServer.Tests\LiteServer.Tests.csproj", "{B5CF2006-4EA1-4257-A9B1-63975973E492}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteServer.Listener.Tests", "tests\LiteServer.Listener.Tests\LiteServer.Listener.Tests.csproj", "{B5CF2006-4EA1-4257-A9B1-63975973E492}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteServer", "src\LiteServer\LiteServer.csproj", "{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,18 @@ Global
 		{B5CF2006-4EA1-4257-A9B1-63975973E492}.Release|x64.Build.0 = Release|Any CPU
 		{B5CF2006-4EA1-4257-A9B1-63975973E492}.Release|x86.ActiveCfg = Release|Any CPU
 		{B5CF2006-4EA1-4257-A9B1-63975973E492}.Release|x86.Build.0 = Release|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Debug|x64.Build.0 = Debug|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Debug|x86.Build.0 = Debug|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Release|x64.ActiveCfg = Release|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Release|x64.Build.0 = Release|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Release|x86.ActiveCfg = Release|Any CPU
+		{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

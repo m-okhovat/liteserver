@@ -13,7 +13,12 @@ namespace LiteServer.Http.HttpContext
             _responseFeature = featureCollection.Get<IHttpResponseFeature>();
         }
 
-        public int StatusCode => _responseFeature.StatusCode;
+        public int StatusCode
+        {
+            get => _responseFeature.StatusCode;
+            set => _responseFeature.StatusCode = value;
+        }
+
         public Stream Body => _responseFeature.Body;
         public NameValueCollection Headers => _responseFeature.Headers;
     }

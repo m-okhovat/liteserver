@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\LiteServer\LiteServer.csproj" />
+    <ProjectReference Include="..\..\src\LiteServer.Listener\LiteServer.Listener.csproj" />
   </ItemGroup>
 
 </Project>

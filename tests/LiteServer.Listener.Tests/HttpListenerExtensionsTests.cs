@@ -1,10 +1,10 @@
-﻿using FluentAssertions;
-using LiteServer.Extensions;
-using System.Linq;
+﻿using System.Linq;
 using System.Net;
+using FluentAssertions;
+using LiteServer.Listener.Extensions;
 using Xunit;
 
-namespace LiteServer.Tests
+namespace LiteServer.Listener.Tests
 {
     public class HttpListenerExtensionsTests
     {

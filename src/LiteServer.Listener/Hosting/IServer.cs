@@ -1,8 +1,8 @@
-﻿using LiteServer.Handlers;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using LiteServer.Listener.Handlers;
 
-namespace LiteServer.Hosting
+namespace LiteServer.Listener.Hosting
 {
     public interface IServer : IDisposable
     {

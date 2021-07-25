@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace LiteServer.Extensions
+namespace LiteServer.Listener.Extensions
 {
     public static class HttpListenerExtensions
     {

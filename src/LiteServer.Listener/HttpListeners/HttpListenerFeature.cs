@@ -1,10 +1,10 @@
-﻿using LiteServer.Http.Features;
-using System;
+﻿using System;
 using System.Collections.Specialized;
 using System.IO;
 using System.Net;
+using LiteServer.Http.Features;
 
-namespace LiteServer.HttpListeners
+namespace LiteServer.Listener.HttpListeners
 {
     public class HttpListenerFeature : IHttpRequestFeature, IHttpResponseFeature
     {

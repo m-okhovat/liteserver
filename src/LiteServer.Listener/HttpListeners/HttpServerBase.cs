@@ -1,10 +1,10 @@
-﻿using LiteServer.Handlers;
-using LiteServer.Hosting;
-using System;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using LiteServer.Listener.Handlers;
+using LiteServer.Listener.Hosting;
 
-namespace LiteServer.HttpListeners
+namespace LiteServer.Listener.HttpListeners
 {
     public abstract class HttpServerBase : IServer
     {
