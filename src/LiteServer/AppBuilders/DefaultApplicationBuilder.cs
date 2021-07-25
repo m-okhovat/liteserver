@@ -1,9 +1,9 @@
-﻿using LiteServer.Listener.Handlers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using LiteServer.Listener.Handlers;
 
-namespace LiteServer.Builders
+namespace LiteServer.AppBuilders
 {
     public class DefaultApplicationBuilder : ILiteApplicationBuilder
     {
