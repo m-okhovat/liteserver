@@ -5,9 +5,9 @@ The library targets .NET Standard 2.0 which supports the following runtimes (and
 * .Net Framework 4.6.1
 * .NET Core 2.0
 
-# Best practice and usage:
+# Best practices and usage:
 
-this library allows you to add a light-weight Htttp server and a custom pipeline and routing into your project. It has also some extensions that makes it easy to configure the LiteServer during the GenericHostBuilder configuration in the program class, in .net core projects.
+this library allows you to add a light-weight Http server and a custom pipeline and routing into your project. It has also some extensions that makes it easy to configure the LiteServer during the GenericHostBuilder configuration in the program class, in .net core projects.
 
 # Installation
 
