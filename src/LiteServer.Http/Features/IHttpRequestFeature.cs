@@ -6,9 +6,9 @@ namespace LiteServer.Http.Features
 {
     public interface IHttpRequestFeature
     {
-        public Uri Uri { get; }
-        public Stream Body { get; }
-        public NameValueCollection Headers { get; }
+        Uri Uri { get; }
+        Stream Body { get; }
+        NameValueCollection Headers { get; }
 
     }
 }

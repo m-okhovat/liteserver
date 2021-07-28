@@ -5,8 +5,8 @@ namespace LiteServer.Http.Features
 {
     public interface IHttpResponseFeature
     {
-        public NameValueCollection Headers { get; }
-        public Stream Body { get; }
-        public int StatusCode { get; set; }
+         NameValueCollection Headers { get; }
+         Stream Body { get; }
+         int StatusCode { get; set; }
     }
 }
