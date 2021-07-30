@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteServer.Http", "src\Lite
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F018048A-FB70-406A-86BE-C47A52702A88}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteServer.Http.Tests", "tests\LiteServer.Http.Tests\LiteServer.Http.Tests.csproj", "{C42DE563-34BB-4407-AE38-AF8F8F46E9E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteServer.Http.Tests.Unit", "tests\LiteServer.Http.Tests.Unit\LiteServer.Http.Tests.Unit.csproj", "{C42DE563-34BB-4407-AE38-AF8F8F46E9E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteServer.Listener.Tests", "tests\LiteServer.Listener.Tests\LiteServer.Listener.Tests.csproj", "{B5CF2006-4EA1-4257-A9B1-63975973E492}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteServer.Listener.Tests.Unit", "tests\LiteServer.Listener.Tests.Unit\LiteServer.Listener.Tests.Unit.csproj", "{B5CF2006-4EA1-4257-A9B1-63975973E492}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteServer", "src\LiteServer\LiteServer.csproj", "{BF4E1D09-F47C-46F3-B983-BBC3D4B95BE1}"
 EndProject
