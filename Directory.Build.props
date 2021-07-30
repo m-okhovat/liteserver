@@ -1,0 +1,12 @@
+﻿<Project>
+  <PropertyGroup>
+    <Version>0.1.23.0</Version>
+    <FileVersion>1.0.0</FileVersion>
+    <Product>LiteServer</Product>
+    <Copyright>Copyright 2020 - 2021, Iran - Mehdi Okhovat</Copyright>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Authors>Mehdi Okhovat</Authors>
+    <RepositoryUrl>https://github.com/m-okhovat/liteserver</RepositoryUrl>
+   
+  </PropertyGroup>
+</Project>

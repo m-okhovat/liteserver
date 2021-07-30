@@ -1,0 +1,18 @@
+mode: MainLine
+assembly-versioning-scheme: MajorMinorPatch
+assembly-file-versioning-scheme: MajorMinorPatch
+commit-message-incrementing: Enabled
+branches:
+  master:
+    increment: Patch
+    regex: ^master
+    is-release-branch: true
+ 
+  develop:
+    mode: ContinuousDeployment
+    increment: Patch
+    regex: ^dev(elop)?(ment)?$
+    is-release-branch: false
+ignore:
+  sha: []
+merge-message-formats: {}
