@@ -19,7 +19,6 @@ this library allows you to add a light-weight Http server and a custom pipeline 
 
 #### .Net Core projects:
 
-> Install-Package LiteServer 
 > Install-Package LiteServer.Extensions.Hosting 
 
 # Quick Start
