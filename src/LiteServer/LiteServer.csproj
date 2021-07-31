@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LiteServer.Http\LiteServer.Http.csproj" />
     <ProjectReference Include="..\LiteServer.Listener\LiteServer.Listener.csproj" />
+
   </ItemGroup>
 
 </Project>

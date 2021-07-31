@@ -104,7 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\LiteServer.Http\LiteServer.Http.csproj">
-      <Project>{E85A53C8-502B-46C7-9410-BA403C76ABE4}</Project>
+      <Project>{e85a53c8-502b-46c7-9410-ba403c76abe4}</Project>
       <Name>LiteServer.Http</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\src\LiteServer.Listener\LiteServer.Listener.csproj">

@@ -1,4 +1,6 @@
-LiteServer is a lightweight HTTP web server that can be used instead of Kestrel. It can be used in console .net core applications and it is possible to add endpoints to console applications using the LiteServer. also it is possible to add middlewares in the pipeline to process the Http request.
+# LiteServer
+
+`LiteServer` is a lightweight HTTP web server that can be used instead of Kestrel. It can be used in `.net core` and `.net framework` console applications in order to add endpoints and request handling pipeline to them. It is possible to add custom middlewares in the pipeline to process the Http request also.
 
 The library targets .NET Standard 2.0 which supports the following runtimes (and newer):
 
@@ -10,6 +12,11 @@ The library targets .NET Standard 2.0 which supports the following runtimes (and
 this library allows you to add a light-weight Http server and a custom pipeline and routing into your project. It has also some extensions that makes it easy to configure the LiteServer during the GenericHostBuilder configuration in the program class, in .net core projects.
 
 # Installation
+
+#### .Net Framework projects:
+
+> Install-Package LiteServer -Version 0.1.23
+
 
 # Quick Start
 

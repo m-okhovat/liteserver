@@ -36,5 +36,13 @@ namespace LiteServer.Extensions
 
             return builder.UseServer(new HttpServer(paths));
         }
+
+        public static ILiteServerBuilder UseHttpListenerServer(this ILiteServerBuilder builder,
+            params string[] paths)
+        {
+            if (paths == null || !paths.Any()) throw new ArgumentNullException(nameof(paths));
+
+            return builder.UseServer(new HttpServer(paths));
+        }
     }
 }
