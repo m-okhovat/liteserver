@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <description>LiteServe Http listener</description>
+    <tags>httpserver webserver pipeline httplistener genericHost</tags>
+  </metadata>
+</package>

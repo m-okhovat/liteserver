@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <description>Light-weight http server with request handling pipeline</description>
+    <tags>httpserver webserver pipeline httplistener</tags>
+  </metadata>
+</package>

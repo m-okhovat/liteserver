@@ -5,12 +5,12 @@ using Nuke.Common.Tooling;
 using Nuke.Common.Tools.Coverlet;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
-using Nuke.Common.Tools.NuGet;
 using System;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.IO.PathConstruction;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
@@ -20,7 +20,7 @@ using static Nuke.Common.Tools.DotNet.DotNetTasks;
 [UnsetVisualStudioEnvironmentVariables]
 class Build : NukeBuild
 {
-    public static int Main() => Execute<Build>(x => x.RunUnitTests);
+    public static int Main() => Execute<Build>(x => x.PushNugetPackages);
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
@@ -125,15 +125,41 @@ class Build : NukeBuild
 
             foreach (var project in projectsToPack)
             {
+                var description = ExtractContentFromNuSpecFile(project, "description");
+                var tags = ExtractContentFromNuSpecFile(project, "tags");
+
                 DotNetPack(s => s
                     .SetProject(project)
                     .SetOutputDirectory(NugetOutputDirectory)
                     .SetNoBuild(true)
                     .SetNoRestore(true)
                     .SetConfiguration(Configuration)
-                    .SetVersion(GitVersion.NuGetVersionV2));
+                    .SetVersion(GitVersion.NuGetVersionV2)
+                    .SetAuthors("Mehdi Okhovat")
+                    .SetDescription(description)
+                    .SetPackageTags(tags)
+                    .SetPackageLicenseUrl("https://github.com/m-okhovat/liteserver/blob/master/LICENSE")
+                    .SetPackageProjectUrl("https://github.com/m-okhovat/liteserver"));
             }
         });
+
+    string ExtractContentFromNuSpecFile(Project project, string section)
+    {
+        var fileContent = GetFileContent($"{project.Directory }/{project.Name}.nuspec");
+
+        var xml = new XmlDocument();
+        xml.LoadXml(fileContent);
+
+        var xnList = xml.SelectNodes("/package/metadata");
+
+        foreach (XmlNode xn in xnList)
+        {
+            return xn[section]?.InnerText;
+
+        }
+
+        return string.Empty;
+    }
 
     Target PushNugetPackages => _ => _
         .DependsOn(PackNugetPackages)
@@ -156,3 +182,4 @@ class Build : NukeBuild
         return content;
     }
 }
+
