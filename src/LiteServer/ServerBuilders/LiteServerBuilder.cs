@@ -30,6 +30,8 @@ namespace LiteServer.ServerBuilders
         {
             var serviceCollection = new ServiceCollection();
             config(serviceCollection);
+            serviceCollection.AddLogging();
+            serviceCollection.AddOptions();
             ServiceCollection = serviceCollection;
             return this;
         }
