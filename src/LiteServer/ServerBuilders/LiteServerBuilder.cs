@@ -1,6 +1,7 @@
 ﻿using LiteServer.AppBuilders;
 using LiteServer.Hosting;
 using LiteServer.Listener.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 
@@ -10,15 +11,26 @@ namespace LiteServer.ServerBuilders
     {
         private IServer _server;
         private readonly List<Action<ILiteApplicationBuilder>> _configs = new List<Action<ILiteApplicationBuilder>>();
+
         public ILiteServerBuilder Configure(Action<ILiteApplicationBuilder> config)
         {
             _configs.Add(config);
             return this;
         }
 
+        public IServiceCollection ServiceCollection { get; private set; }
+
         public ILiteServerBuilder UseServer(IServer server)
         {
             _server = server;
+            return this;
+        }
+
+        public ILiteServerBuilder ConfigureContainer(Action<IServiceCollection> config)
+        {
+            var serviceCollection = new ServiceCollection();
+            config(serviceCollection);
+            ServiceCollection = serviceCollection;
             return this;
         }
 
@@ -30,7 +42,7 @@ namespace LiteServer.ServerBuilders
                 config(applicationBuilder);
             }
 
-            return new Hosting.LiteServer(_server, applicationBuilder.Build());
+            return new Hosting.LiteServer(_server, applicationBuilder.Build(), ServiceCollection);
         }
     }
 }

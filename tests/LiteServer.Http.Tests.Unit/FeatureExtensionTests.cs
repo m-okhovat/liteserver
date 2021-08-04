@@ -1,12 +1,12 @@
+using System.Collections.Specialized;
+using System.IO;
 using FluentAssertions;
 using LiteServer.Http.Extensions;
 using LiteServer.Http.Features;
-using LiteServer.Http.Tests.Utilities;
-using System.Collections.Specialized;
-using System.IO;
+using LiteServer.Http.Tests.Unit.Utilities;
 using Xunit;
 
-namespace LiteServer.Http.Tests
+namespace LiteServer.Http.Tests.Unit
 {
     public class FeatureExtensionTests
     {

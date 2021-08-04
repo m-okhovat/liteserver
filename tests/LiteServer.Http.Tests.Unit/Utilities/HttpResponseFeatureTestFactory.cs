@@ -2,7 +2,7 @@
 using System.IO;
 using LiteServer.Http.Features;
 
-namespace LiteServer.Http.Tests.Utilities
+namespace LiteServer.Http.Tests.Unit.Utilities
 {
     public static class HttpResponseFeatureTestFactory
     {

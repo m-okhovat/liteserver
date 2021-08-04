@@ -1,15 +1,15 @@
-﻿using FluentAssertions;
-using LiteServer.Http.Extensions;
-using LiteServer.Http.Features;
-using LiteServer.Http.HttpContext;
-using LiteServer.Http.Tests.Utilities;
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using FluentAssertions;
+using LiteServer.Http.Extensions;
+using LiteServer.Http.Features;
+using LiteServer.Http.HttpContext;
+using LiteServer.Http.Tests.Unit.Utilities;
 using Xunit;
 
-namespace LiteServer.Http.Tests
+namespace LiteServer.Http.Tests.Unit
 {
     public class HttpResponseExtensionsTests
     {

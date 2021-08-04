@@ -4,7 +4,7 @@ using FluentAssertions;
 using LiteServer.Listener.Extensions;
 using Xunit;
 
-namespace LiteServer.Listener.Tests
+namespace LiteServer.Listener.Tests.Unit
 {
     public class HttpListenerExtensionsTests
     {
