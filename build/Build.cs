@@ -29,9 +29,8 @@ class Build : NukeBuild
     [GitVersion(Framework = "netcoreapp3.1")] GitVersion GitVersion;
     [Parameter] string TestResultDirectory = RootDirectory + "/Artifacts/Test-Results/";
     [Parameter] string NugetOutputDirectory = RootDirectory + "/Artifacts/NugetPackages/";
-    // [Parameter] string NugetServerUrl = "https://api.nuget.org/v3/index.json";
-    [Parameter] string NugetServerUrl = "https://www.myget.org/F/m-okhovat/api/v3/index.json";
-    [Parameter] string NugetApiKey = "6007027d-5619-4880-a4c7-8539dec6842c";
+    [Parameter] string NugetServerUrl = "https://api.nuget.org/v3/index.json";
+    [Parameter] string NugetApiKey;
 
     Target Information => _ => _
         .Before(Preparation)
