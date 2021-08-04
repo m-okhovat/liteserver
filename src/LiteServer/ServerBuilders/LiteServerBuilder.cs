@@ -11,6 +11,7 @@ namespace LiteServer.ServerBuilders
     {
         private IServer _server;
         private readonly List<Action<ILiteApplicationBuilder>> _configs = new List<Action<ILiteApplicationBuilder>>();
+        public IServiceCollection ServiceCollection { get; private set; }
 
         public ILiteServerBuilder Configure(Action<ILiteApplicationBuilder> config)
         {
@@ -18,7 +19,6 @@ namespace LiteServer.ServerBuilders
             return this;
         }
 
-        public IServiceCollection ServiceCollection { get; private set; }
 
         public ILiteServerBuilder UseServer(IServer server)
         {
@@ -36,7 +36,7 @@ namespace LiteServer.ServerBuilders
 
         public ILiteHost Build()
         {
-            var applicationBuilder = new DefaultApplicationBuilder();
+            var applicationBuilder = new DefaultApplicationBuilder(ServiceCollection.BuildServiceProvider());
             foreach (var config in _configs)
             {
                 config(applicationBuilder);

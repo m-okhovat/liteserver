@@ -1,7 +1,7 @@
-﻿using System;
+﻿using LiteServer.Listener.Handlers;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using LiteServer.Listener.Handlers;
 
 namespace LiteServer.AppBuilders
 {
@@ -9,6 +9,13 @@ namespace LiteServer.AppBuilders
     {
         private List<Func<HandlerDelegate, HandlerDelegate>> _middlewares =
             new List<Func<HandlerDelegate, HandlerDelegate>>();
+
+        public DefaultApplicationBuilder(IServiceProvider serviceProvider)
+        {
+            ServiceProvider = serviceProvider;
+        }
+
+        public IServiceProvider ServiceProvider { get; private set; }
 
 
         public ILiteApplicationBuilder Use(Func<HandlerDelegate, HandlerDelegate> middleware)
